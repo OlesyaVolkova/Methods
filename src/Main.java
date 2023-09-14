@@ -3,38 +3,37 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
-        System.out.println("Введите два числа: ");
+        System.out.print("Введите два числа: ");
         int a = kb.nextInt();
         int b = kb.nextInt();
 
-        int c = Sum(a, b);
+        int c = Math.Sum(a, b);
         System.out.println("%d + %d = %d".formatted(a, b, c));
-        System.out.println("%d - %d = %d".formatted(a, b, Diff(a, b)));
-        System.out.println("%d * %d = %d".formatted(a, b, Prod(a, b)));
-        System.out.println("%d / %d = %d".formatted(a, b, Quot(a, b)));
+        System.out.println("%d - %d = %d".formatted(a, b, Math.Diff(a, b)));
+        System.out.println("%d * %d = %d".formatted(a, b, Math.Prod(a, b)));
+        System.out.println("%d / %d = %f".formatted(a, b, Math.Quot(a, b)));
     }
-    static int Sum(int a, int b)
-    {
+}
+
+class Math {
+    static int Sum(int a, int b) {
         //Sum - сумма
         int c = a + b;
         return c;
     }
 
-    static int Diff(int a, int b)
-    {
+    static int Diff(int a, int b) {
         //Difference - разность
         return a - b;
     }
 
-    static int Prod(int a, int b)
-    {
+    static int Prod(int a, int b) {
         //Product - произведение
         return a * b;
     }
 
-    static double Quot(int a, int b)
-    {
+    static double Quot(int a, int b) {
         //Quotient - частное
-        return (double)a / b;
+        return (double) a / b;
     }
 }
